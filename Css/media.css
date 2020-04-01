@@ -1,0 +1,22 @@
+
+body {
+	background-color: red;
+}
+
+@media screen and (min-width: 501px){
+  
+  body {
+  	background-color: green;
+  }
+
+
+}
+
+@media screen and (min-width: 601px){
+  
+  body {
+  	background-color: blue;
+  }
+
+
+}

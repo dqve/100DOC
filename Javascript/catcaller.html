@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cat caller</title>
+</head>
+<body>
+<style type="text/css">
+	.img{
+		border: 1px outset grey;
+	}
+
+		.div{
+  width: 700px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+	.one{
+		width: 50%;
+	}
+
+	.two{
+		width: 50%;
+	}
+	
+</style>
+<div style="width: 100%">
+
+<div class="one">
+<h1 id="name1"></h1>
+<h2 id="1">1</h2>
+
+
+
+
+
+
+
+
+
+<div class="cat1">
+	<img id="cat" class="img" src="../../Udacity%20-%20Front-End%20Web%20Developer%20Nanodegree/Udacity%20-%20Front-End%20Web%20Developer%20Nanodegree%20nd001%20v7.0.0/Part%2004-Module%2001-Lesson%2001_Changing%20Expectations/media/unnamed-128978-0.gif">
+</div>
+</div>
+
+<div class="two">
+<h1 id="name2"></h1>
+<h2 id="2">1</h2>
+
+<div class="cat2">
+	<img id="cat2" class="img" src="../../Udacity%20-%20Front-End%20Web%20Developer%20Nanodegree/Udacity%20-%20Front-End%20Web%20Developer%20Nanodegree%20nd001%20v7.0.0/Part%2004-Module%2001-Lesson%2001_Changing%20Expectations/media/unnamed-128978-0.gif">
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+	
+const cat = document.getElementById('cat');
+
+const cat1name = "Jorja";
+const cat2name = "Sam";
+
+document.querySelector('#name1').textContent = cat1name;
+
+document.querySelector('#name2').textContent = cat2name;
+
+let caller1 = document.querySelector('.one');
+let counter1 = Number(caller1.querySelector('h2').textContent);
+cat.addEventListener('click', function (){
+var w = 1;
+console.log(caller1.querySelector('h2').textContent);
+caller1.querySelector('h2').textContent = counter1 + 1;
+counter1++
+});
+
+let caller2 = document.querySelector('.two');
+let counter2 = Number(caller2.querySelector('h2').textContent);
+
+cat2.addEventListener('click', function (){
+console.log(caller2.querySelector('h2').textContent);
+caller2.querySelector('h2').textContent = counter2 + 1;
+counter2++
+});
+
+</script>
+</body>
+</html>
