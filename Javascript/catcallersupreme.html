@@ -6,14 +6,208 @@
 <body>
 
 
+<input type="text" name="naming" id="naming"><input type="submit" id="namer">
 
-<div class="navigation">
-	<ul>
-		<li><a href="">Cat</a></li>
+<div class="nav">
+	<ul id="navi">
+		<li><a href="#firstcat">Cat1</a></li>
+		<li><a href="#secondcat">Cat2</a></li>
+		<li><a href="#thirdcat">Cat3</a></li>
 	</ul>
 </div>
 
+<div class="catitem">
+	<div id="firstcat">
+		<img src="https://cdn2.thecatapi.com/images/MTg5NjAzMw.jpg" style="margin: 10px; width:500px; height: 500px; border: 1px outset grey;">
+	</div>
+	<div id="secondcat">
+		<img src="https://cdn2.thecatapi.com/images/MTYxMDIwNw.jpg" style="margin: 10px; width:500px; height: 500px; border: 1px outset grey;">
+	</div>
+	<div  id="thirdcat">
+		<img src="https://cdn2.thecatapi.com/images/blr.jpg" style="margin: 10px; width:500px; height: 500px; border: 1px outset grey;">
+	</div>
+</div>
 
+<a href="#top" style="position: relative; left: auto; ">TOP</a>
+<script type="text/javascript">
+/*
+ getName.addEventListener("submit", console.log(`test submit ${document.querySelector('#naming').value}`))
+
+	function picn () {
+
+fetch('https://api.thecatapi.com/v1/images/search?size=full')
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    let pic = data[0].url;
+    console.log(pic);
+    
+    document    
+
+    let img = document.createElement('img');
+    img.setAttribute('src', pic);
+    img.setAttribute('style', 'margin: 10px; width:500px; height: 500px; margin-left: auto; margin-right: auto; border: 1px outset grey;');
+    document.body.appendChild(img);
+
+    
+
+  })*/
+  /*.then(() => {
+
+let img = document.createElement('img');
+let srce = img.setAttribute('src', image);
+
+document.body.appendChild(img);
+})*///;
+
+//return img;
+//return image;
+//return source;
+/*}
+
+function picn () {
+
+	  let catName = document.querySelector('#naming').value;
+	  let navItem = document.querySelector('.nav #navi');
+	  let catItem = document.querySelector('.catitem');
+	  
+	  let catNav = document.createElement('li');
+	  let catLink = document.createElement('a');
+	  catLink.setAttribute('href', catName);
+	  catLink.textContent = catName;
+
+	  let cats = document.createElement('div');
+	  cats.setAttribute('id', catName);
+	  
+	  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+	  .then((response) => {
+	    return response.json();
+	  })
+	  .then((data) => {
+	    let pic = data[0].url;
+	    console.log(pic);
+	    
+	  let catImage = document.createElement('img');
+	  catImage.setAttribute('src', pic);
+	  catImage.setAttribute('id', `${catName}'s-picture`);
+	  catImage.setAttribute('style', 'margin: 10px; width:500px; height: 500px; margin-left: auto; margin-right: auto; border: 1px outset grey;');
+
+	  
+	  navItem.appendChild(catNav);
+	  catNav.appendChild(catLink);
+	  catItem.appendChild(cats);
+	  cats.appendChild(catImage);
+	  })
+
+}
+
+*/
+getName = document.querySelector(`#namer`);
+getName.addEventListener('submit', console.log(`test submit ${document.querySelector('#naming').value}`));
+/*
+ let catName = document.querySelector('#naming').value;
+	  let navItem = document.querySelector('.nav #navi');
+	  let catItem = document.querySelector('.catitem');
+	  
+	  let catNav = document.createElement('li');
+	  let catLink = document.createElement('a');
+	  catLink.setAttribute('href', `#${catName}`);
+	  catLink.textContent = catName;
+
+	  let cats = document.createElement('div');
+	  cats.setAttribute('id', catName);
+      let catTag = document.createElement('h1');
+	  catTag.textContent = catName;
+      let catCount = document.createElement('h2');
+	  catCount.setAttribute('id', catName);
+      catCount.textContent = 1;
+	  
+	  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+	  .then((response) => {
+	    return response.json();
+	  })
+	  .then((data) => {
+	    let pic = data[0].url;
+	    console.log(pic);
+	    
+	  let catImage = document.createElement('img');
+	  catImage.setAttribute('src', pic);
+	  catImage.setAttribute('id', `${catName}'s-picture`);
+	  catImage.setAttribute('style', 'margin: 10px; width:500px; height: 500px; margin-left: auto; margin-right: auto; border: 1px outset grey;');
+
+	  
+	  navItem.appendChild(catNav);
+	  catNav.appendChild(catLink);
+	  catItem.appendChild(cats);
+	  cats.appendChild(catTag);
+      cats.appendChild(catCount);
+      cats.appendChild(catImage);
+      thisCat = catItem.querySelector(`#${catName}`);
+
+      cats.addEventListener('click', (function (cat){
+      let counter = cat.querySelector
+      (`h2`).textContent;
+      console.log(cat.querySelector
+      (`h2`).textContent);
+      cat.querySelector
+      (`h2`).textContent = Number(counter) + 1;
+      counter++
+        })(thisCat));
+	  })
+*/
+
+ let catName = document.querySelector('#naming').value;
+	  let navItem = document.querySelector('.nav #navi');
+	  let catItem = document.querySelector('.catitem');
+	  
+	  let catNav = document.createElement('li');
+	  let catLink = document.createElement('a');
+	  catLink.setAttribute('href', `#${catName}`);
+	  catLink.textContent = catName;
+
+	  let cats = document.createElement('div');
+	  cats.setAttribute('id', catName);
+      let catTag = document.createElement('h1');
+	  catTag.textContent = catName;
+      let catCount = document.createElement('h2');
+	  catCount.setAttribute('id', catName);
+      catCount.textContent = 1;
+	  
+	  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+	  .then((response) => {
+	    return response.json();
+	  })
+	  .then((data) => {
+	    let pic = data[0].url;
+	    console.log(pic);
+	    
+	  let catImage = document.createElement('img');
+	  catImage.setAttribute('src', pic);
+	  catImage.setAttribute('id', `${catName}'s-picture`);
+	  catImage.setAttribute('style', 'margin: 10px; width:500px; height: 500px; margin-left: auto; margin-right: auto; border: 1px outset grey;');
+
+	  
+	  navItem.appendChild(catNav);
+	  catNav.appendChild(catLink);
+	  catItem.appendChild(cats);
+	  cats.appendChild(catTag);
+      cats.appendChild(catCount);
+      cats.appendChild(catImage);
+      thisCat = catItem.querySelector(`#${catName}`);
+
+      cats.addEventListener('click', (function (){
+      let counter = cats.querySelector
+      (`h2`).textContent;
+      console.log(cats.querySelector
+      (`h2`).textContent);
+      cats.querySelector
+      (`h2`).textContent = Number(counter) + 1;
+      counter++
+        })());
+	  })
+
+</script>
 
 
 </body>
