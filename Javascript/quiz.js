@@ -955,9 +955,6 @@ const jamesPlane = new Plane(4);
 jamesPlane.startEngines();
 
 
-	ul#nav>li*4
-
-
 
 /*
  * Go over .call and .create and .prototype and .constructor functions
