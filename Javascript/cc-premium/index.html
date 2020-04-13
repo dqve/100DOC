@@ -3,21 +3,34 @@
 <head>
 	<title>Cat caller</title>
 </head>
-<body>
+	<body>
 
-<div id="">
-	<ul id="">
-		<li id=""></li>
-	</ul>
-</div>
+		<ul id="cat-list">
+		</ul>
 
-<div id="cats">
-	<div id="catItem">
-		<h1 id="catName"></h1>
-		<h2 id="catCount"></h2>
-		<img id="catImage" src="">
-	</div>
-</div>
-
-</body>
+		<div  id="cats">
+			<div style="width: 50%" id="catItem">
+				<h1 id="catName"></h1>
+				<h2 id="catCount"></h2>
+				<img id="catImage" src="">
+			</div>
+		</div>
+			<h3>Admin: <button id="adminMode">Admin</button></h3>
+			<div style="width: 50%; border: 1px solid black; padding: 20px; margin-top: 30px; display: none;" id="admin">
+			  <form>
+				<label>Name:  
+					<input type="text" name="newName" id="newName">
+				</label><br>
+				<label>New URL: 
+					<input type="text" name="newUrl" id="newUrl">
+				</label><br>
+				<label>Clicks: 
+					<input type="text" name="newCount" id="newCount">
+				</label><br>
+				<button id="addNew">SAVE</button>
+				<button id="cancelAdd">CANCEL</button>
+			  </form>
+			</div>
+	<script type="text/javascript" src="js/main.js"></script>
+	</body>
 </html>
