@@ -1,0 +1,152 @@
+- Worked on the custom forms
+- Started the documentation of custom form cahnges
+- reviewed the Data-value import on the NMDR
+
+- 
+
+- https://scrimba.com/
+- https://learn.co/tracks/bootcamp-prep-v2/html-fundamentals/html/using-images-in-html#
+- https://www.codecademy.com/learn/paths/web-development
+- free code camp
+- udacity
+- plural slight
+- 
+
+
+- Worked on the custom forms
+- Reviewed data value import on the NMDR
+
+- Work on the custom forms
+- Review data value import on the NMDR 
+
+/*================OUTSTANDING TOPICS AND LEARNING POINTS IN JS=========================
+ * Go over .call and .create and .prototype and .constructor and .target functions
+ * Also go over the super() function
+ * Also go over typeOf, .get
+ * setTimeOut and others similar
+ * Mathround and other math functions
+ * When to use Var, const, let
+ * Application of promise, proxy, .map, .set
+ * Literal implimentation traps, generator, iterantion and iterable
+ * Check out Polyfill
+ * Javascript ES6 cookbook
+ * Get and Set method
+ * use of _ in variable declaration
+ * Private methods and variable declarations
+ * Javascript design patterns
+ * Javascript MVC cook book
+ * All the events that can be listened to
+ * Fully understand callback functions and try different scenarios
+ * transform in css, checkout transform for color changes
+ * parseInt adn it's family
+ * Object.assign()
+ * Learn About service workers
+ * React and vanilla Render method
+ * data - attributes
+ * web workers
+ * synchronous vs asynchronous
+ * Go over Objects
+ * Take a Tonia course on promises
+ * Use setTimeout
+ * DOM document loader, document loading
+ * Document section in MDN WEB API
+ * Date .get functions
+ * Take digital oceans course on js
+ * To locale string
+ * Spread
+ * .localstorage, using the local.storage
+ */
+
+_______________________________________________________________________________________
+CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD
+_______________________________________________________________________________________
+---------------------------------------------------------------------------------------
+
+function MyInfo(){
+
+
+}
+
+ReactDOM(<MyInfo />, document.getElementById('root'))
+
+
+================React list============================================
+Frangments
+Children
+Higher-Order Componenets
+Render Props
+Context
+Optimizations (PureComponents, Dynamic imports, React.lazy, React.suspense, React.memo)
+Hooks
+React Router
+Redux
+
+
+================React list============================================
+
+let thisCat = document.querySelector(`#$${catName}'s-picture`);
+
+     thisCat.addEventListener('click', (function (cname){
+let counter = document.querySelector(`#${cname} h2`).textContent;
+      console.log(document.querySelector(`#${cname} h2`).textContent);
+      console.log(`${cname}`);
+      document.querySelector(`#${cname} h2`).textContent = Number(counter) + 1;
+      counter++
+ })(catName))});
+
+
+
+========================================
+
+ let catName = document.querySelector('#naming').value;
+	  let navItem = document.querySelector('.nav #navi');
+	  let catItem = document.querySelector('.catitem');
+	  
+	  let catNav = document.createElement('li');
+	  let catLink = document.createElement('a');
+	  catLink.setAttribute('href', `#${catName}`);
+	  catLink.textContent = catName;
+
+	  let cats = document.createElement('div');
+	  cats.setAttribute('id', catName);
+      let catTag = document.createElement('h1');
+	  catTag.textContent = catName;
+      let catCount = document.createElement('h2');
+	  catCount.setAttribute('id', catName);
+      catCount.textContent = 1;
+	  
+	  fetch('https://api.thecatapi.com/v1/images/search?size=full')
+	  .then((response) => {
+	    return response.json();
+	  })
+	  .then((data) => {
+	    let pic = data[0].url;
+	    console.log(pic);
+	    
+	  let catImage = document.createElement('img');
+	  catImage.setAttribute('src', pic);
+	  catImage.setAttribute('id', `${catName}'s-picture`);
+	  catImage.setAttribute('style', 'margin: 10px; width:500px; height: 500px; margin-left: auto; margin-right: auto; border: 1px outset grey;');
+
+	  
+	  navItem.appendChild(catNav);
+	  catNav.appendChild(catLink);
+	  catItem.appendChild(cats);
+	  cats.appendChild(catTag);
+      cats.appendChild(catCount);
+      cats.appendChild(catImage);
+      })
+
+=======================================
+
+for(cat of cats){
+
+cat.addEventListener('click', (function (cname){
+let tac = cname.id
+let counter = document.querySelector(`#${tac} h2`).textContent;
+      console.log(document.querySelector(`#${tac} h2`).textContent);
+      console.log(`${cname.id}`);
+      document.querySelector(`#${cname.id} h2`).textContent = Number(counter) + 1;
+      counter++
+ })(cat))
+}
