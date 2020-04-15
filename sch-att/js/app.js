@@ -12,37 +12,41 @@ var model = {
         {
             name: "Slappy the Frog",
             
-            days: {           
-                one: true,
-                two: true,
-                three: false,
-                four: false,
-                five: true,
-                six: true,
-                seven: true,
-                eight: false,
-                nine: true,
-                ten: false,
-            },
-
+            days: [           
+                true,
+                true,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                true,
+                false,
+                true,
+                true
+            ],
+            
             missed: 4
 
         },
         {
             name: "Lilly the Lizard",
             
-            days: {           
-                one: true,
-                two: true,
-                three: false,
-                four: false,
-                five: true,
-                six: true,
-                seven: true,
-                eight: false,
-                nine: true,
-                ten: false,
-            },
+            days: [           
+                true,
+                true,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                true,
+                false,
+                true,
+                true
+            ],
             
             missed: 4
 
@@ -60,7 +64,9 @@ var model = {
                 true,
                 false,
                 true,
-                false
+                false,
+                true,
+                true
             ],
             
             missed: 4
@@ -70,16 +76,18 @@ var model = {
             name: "Gregory the Goat",
             
             days: [           
+               true,
+                true,
+                false,
+                false,
+                true,
                 true,
                 true,
                 false,
-                false,
-                true,
-                true,
                 true,
                 false,
                 true,
-                false
+                true
             ],
             
             missed: 4
@@ -98,7 +106,9 @@ var model = {
                 true,
                 false,
                 true,
-                false
+                false,
+                true,
+                true
             ],
             
             missed: 4
@@ -119,10 +129,13 @@ var octopus = {
 
         getStudents: function() {
             return model.students
-        }
+        },
 
         changeStatus: function(id, dayId, status) {
             model.students[id].days[dayId] = !status
+            status? model.students[id].missed++ :
+            model.students[id].missed--
+            
         }
 };
 
@@ -149,6 +162,8 @@ var view = {
             elem = document.createElement('tr')
             elemS = document.createElement('td')
             elemS.textContent = one.name
+            elem.classList.add('student')
+            elemS.classList.add('name-col')
             elem.appendChild(elemS)
 
             daysList = one.days
@@ -174,14 +189,18 @@ var view = {
 
          for (j = 0; j < daysList.length; j++) {
             elemIpTd = document.createElement('td')
+            elemIpTd.classList.add('attend-col')
             elemIp = document.createElement('input')
+
             elemIp.type = "checkbox"
-            elemIp.checked = studentA[j]
+            elemIp.checked = daysList[j]
+
             
             elemIp.addEventListener('change', (function(id, dayId, status) {
                 return function() {
                     octopus.changeStatus(id, dayId, status)
-                    catView.render()
+                    document.getElementById('student').innerHTML = ""
+                    view.render()
                 }
             })(i, j, elemIp.checked))
 
@@ -191,6 +210,7 @@ var view = {
 
         elemN = document.createElement('td')
         elemN.textContent = one.missed
+        elemN.classList.add('missed-col')
         elem.appendChild(elemN)
 
         //add all students to the list
