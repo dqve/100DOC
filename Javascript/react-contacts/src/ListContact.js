@@ -19,6 +19,10 @@ static propTypes = {
 		this.setState({ query: query.trim() })
 	}
 
+	clearQuery(){
+		
+	}
+
 	render(){
 
 		const {contacts, deleteContact} = this.props
@@ -51,6 +55,7 @@ static propTypes = {
 					showingContacts.length !== contacts.length && (
 						<div className="showing-contacts">
 							<span>Now showing {showingContacts.length} of {contacts.length} total</span>
+							<button>Show All</button>
 						</div>
 				)}
 				<ol className="contact-list">

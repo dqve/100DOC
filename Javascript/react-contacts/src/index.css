@@ -176,7 +176,8 @@ body, .app {
   align-self: center;
   width: 32px;
   height: 32px;
-  background-color: gray;
+  background-color: transparent;
+  background-image: url('./icons/cancel.svg');
   background-size: 100% 100%;
   border: 0;
   color: black;
