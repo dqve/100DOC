@@ -7,7 +7,8 @@ class CreateContact extends Component {
 
 	handleSubmit = (e) => {
 		e.preventDefault()
-		cosnt values = serializeForm(e.target, {hash: true})
+		const values = serializeForm(e.target, {hash: true})
+		console.log(values)
 		if (this.props.onCreateContact)
 			this.props.onCreateContact(values)
 	}
