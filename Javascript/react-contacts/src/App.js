@@ -28,6 +28,14 @@ class App extends Component {
   }
 
 
+  createContact(contact) {
+    ContactsAPI.create(contact).then(contact => {
+      this.setState(state => ({
+        contacts: state.contacts.concat({contact})
+      }))
+    })
+  }
+
   changePage = () => {
     this.setState({currentPage: "home"})
   }
@@ -43,7 +51,16 @@ class App extends Component {
               this.setState({screen: 'create'})
             }}/>
           )} />
-        <Route exact path="/create" render={() => (<CreateContact />)}/>
+        <Route exact path="/create" 
+        render={({history}) => (
+          <CreateContact 
+            onCreateContact={(contact) => {
+              this.createContact(contact)
+              history.push('/')
+            }}
+          />
+          )}
+        />
       </div>
 
     )
