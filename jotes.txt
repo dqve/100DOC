@@ -1,8 +1,4 @@
-- Worked on the custom forms
-- Started the documentation of custom form cahnges
-- reviewed the Data-value import on the NMDR
-
-- 
+ 
 
 - https://scrimba.com/
 - https://learn.co/tracks/bootcamp-prep-v2/html-fundamentals/html/using-images-in-html#
@@ -55,6 +51,7 @@
  * To locale string
  * Spread
  * .localstorage, using the local.storage
+ * Destructuring
  */
 
 _______________________________________________________________________________________
@@ -76,10 +73,11 @@ Children
 Higher-Order Componenets
 Render Props
 Context
-Optimizations (PureComponents, Dynamic imports, React.lazy, React.suspense, React.memo)
+Optimizations (PureComponents, Dynamic imports, React.lazy, React.suspense, React.memo React.strictmode)
 Hooks
 React Router
 Redux
+Prop-types
 
 
 ================React list============================================
