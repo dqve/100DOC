@@ -1,4 +1,3 @@
- 
 
 - https://scrimba.com/
 - https://learn.co/tracks/bootcamp-prep-v2/html-fundamentals/html/using-images-in-html#
@@ -6,14 +5,10 @@
 - free code camp
 - udacity
 - plural slight
-- 
+- skill share
+- Udemy
 
 
-- Worked on the custom forms
-- Reviewed data value import on the NMDR
-
-- Work on the custom forms
-- Review data value import on the NMDR 
 
 /*================OUTSTANDING TOPICS AND LEARNING POINTS IN JS=========================
  * Go over .call and .create and .prototype and .constructor and .target functions
@@ -49,9 +44,11 @@
  * Date .get functions
  * Take digital oceans course on js
  * To locale string
- * Spread
+ * Spread operator
  * .localstorage, using the local.storage
  * Destructuring
+ * .babelrc
+ * deep cloning
  */
 
 _______________________________________________________________________________________
@@ -67,7 +64,9 @@ function MyInfo(){
 ReactDOM(<MyInfo />, document.getElementById('root'))
 
 
-================React list============================================
+================React list================================================================================
+
+
 Frangments
 Children
 Higher-Order Componenets
@@ -77,10 +76,18 @@ Optimizations (PureComponents, Dynamic imports, React.lazy, React.suspense, Reac
 Hooks
 React Router
 Redux
+State lifting
+Deep cloning
+_________________________________________________________________________________________________________
+
 Prop-types
+React material
+React ui
+React bootstrap
+
+===========================================React list=====================================================
 
 
-================React list============================================
 
 let thisCat = document.querySelector(`#$${catName}'s-picture`);
 
@@ -94,7 +101,7 @@ let counter = document.querySelector(`#${cname} h2`).textContent;
 
 
 
-========================================
+===========================================================================================================
 
  let catName = document.querySelector('#naming').value;
 	  let navItem = document.querySelector('.nav #navi');
@@ -148,3 +155,6 @@ let counter = document.querySelector(`#${tac} h2`).textContent;
       counter++
  })(cat))
 }
+
+
+	
