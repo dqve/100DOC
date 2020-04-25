@@ -12,7 +12,7 @@
 
 /*================OUTSTANDING TOPICS AND LEARNING POINTS IN JS=========================
  * Go over .call and .create and .prototype and .constructor and .target functions
- * Also go over the super() function
+ * Also go over the super() function 
  * Also go over typeOf, .get
  * setTimeOut and others similar
  * Mathround and other math functions
@@ -22,7 +22,7 @@
  * Check out Polyfill
  * Javascript ES6 cookbook
  * Get and Set method
- * use of _ in variable declaration
+ * use of _ in variable declaration (privacy) 
  * Private methods and variable declarations
  * Javascript design patterns
  * Javascript MVC cook book
@@ -35,6 +35,7 @@
  * React and vanilla Render method
  * data - attributes
  * web workers
+ * service workers
  * synchronous vs asynchronous
  * Go over Objects
  * Take a Tonia course on promises
@@ -53,8 +54,8 @@
 
 _______________________________________________________________________________________
 CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD
-_______________________________________________________________________________________
----------------------------------------------------------------------------------------
+___________________________________________________________________________________________________________________________
+---------------------------------------------------------------------------------------------------------------------------
 
 function MyInfo(){
 
