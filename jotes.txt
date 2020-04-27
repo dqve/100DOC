@@ -12,8 +12,6 @@
 
 /*================OUTSTANDING TOPICS AND LEARNING POINTS IN JS=========================
  * Go over .call and .create and .prototype and .constructor and .target functions
- * Also go over the super() function 
- * Also go over typeOf, .get
  * setTimeOut and others similar
  * Mathround and other math functions
  * When to use Var, const, let
@@ -22,7 +20,6 @@
  * Check out Polyfill
  * Javascript ES6 cookbook
  * Get and Set method
- * use of _ in variable declaration (privacy) 
  * Private methods and variable declarations
  * Javascript design patterns
  * Javascript MVC cook book
@@ -50,7 +47,18 @@
  * Destructuring
  * .babelrc
  * deep cloning
+ * ******side-effect of type-coercion.
  */
+
+/*
+ *
+ * ###use of _ in variable declaration (privacy)###
+ * ###Also go over the super() function 
+ * ###Also go over typeOf, .get
+ *
+ */
+
+
 
 _______________________________________________________________________________________
 CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD BUILT-IN OBJECT, GLOBAL OBJECTS, CHECK OUT STANDARD
