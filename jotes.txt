@@ -47,6 +47,7 @@
  * Destructuring
  * .babelrc
  * deep cloning
+ * find() tool
  * ******side-effect of type-coercion.
  */
 
