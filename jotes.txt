@@ -49,6 +49,8 @@
  * deep cloning
  * find() tool
  * ******side-effect of type-coercion.
+ * creating aliases
+ * spread and rest operators
  */
 
 /*
