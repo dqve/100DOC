@@ -1,10 +1,3 @@
-/* STUDENTS IGNORE THIS FUNCTION
- * All this does is create an initial
- * attendance record if one is not found
- * within localStorage.
- */
-
-
 /* ======= Model ======= */
 
 var model = {
