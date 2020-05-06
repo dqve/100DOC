@@ -1,34 +1,11 @@
-/* STUDENTS IGNORE THIS FUNCTION
- * All this does is create an initial
- * attendance record if one is not found
- * within localStorage.
- */
-
-
 /* ======= Model ======= */
 
 var model = {
     students: [
         {
             name: "Slappy the Frog",
-            
-            days: [           
-                true,
-                true,
-                false,
-                false,
-                true,
-                true,
-                true,
-                false,
-                true,
-                false,
-                true,
-                true
-            ],
-            
+            days: [true, true, false, false, true, true, true, false, true, false, true, true],
             missed: 4
-
         },
         {
             name: "Lilly the Lizard",
@@ -145,7 +122,7 @@ var octopus = {
 var view = {
 
     init: function() {
-        // store admin pointers to our DOM elements for easy access later
+        // store admin pointers to DOM elements for easy access later
         this.student = document.getElementById('student')
         
         this.render()
@@ -169,8 +146,6 @@ var view = {
             daysList = one.days
             
             //former implementation in objects: 
-
-
                 /* array of keys of days for each student
                 each = Object.keys(daysList);
 
@@ -219,11 +194,11 @@ var view = {
     }
 };
 
-// make it go!
+// initialize state!
 octopus.init()
 
 
-/* All app
+/* Former code using spaghetti code
 (function() {
     if (!localStorage.attendance) {
         console.log('Creating attendance records...');
