@@ -33,16 +33,26 @@ const randomChoreDoorGenerator = ()=>{
 	  let anImagePic = imageList[i]
 	  anImage.onclick = () => (
 	      anImage.src = imageList[i]
+        playDoor()
 	      )
-	   
-	}
+    }
+}
+
+const isClicked = (door) => {
+  closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+  if(door.src == closedDoorPath){
+    return false
+  }else{
+    return true
+  }
 }
 
 const playDoor = () => {
+  numClosedDoors--
   if (numClosedDoors === 0){
     gameOver()
   }
-  numClosedDoors--
+
 }
 
 randomChoreDoorGenerator()
