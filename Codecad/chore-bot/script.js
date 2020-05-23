@@ -32,9 +32,10 @@ const randomChoreDoorGenerator = ()=>{
 	  let anImage = doorImages[i]
 	  let anImagePic = imageList[i]
 	  anImage.onclick = () => (
-	      anImage.src = imageList[i]
-        playDoor()
-	      )
+	    if(!isClicked(anImage)){
+          anImage.src = imageList[i]
+          playDoor()
+        })
     }
 }
 
