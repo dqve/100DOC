@@ -8,6 +8,8 @@ const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chor
 
 const spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg"
 
+const startButton = document.getElementById('start');
+
 const randomChoreDoorGenerator = ()=>{
     const numClosedDoors = 3;
     const choreDoor = Math.floor(Math.random() * numClosedDoors);
@@ -36,7 +38,10 @@ const randomChoreDoorGenerator = ()=>{
           anImage.src = imageList[i]
           playDoor()
         }}
+    gaveOver(status){
+      
     }
+  }
 }
 
 const isClicked = (door) => {
