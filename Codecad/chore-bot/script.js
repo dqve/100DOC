@@ -31,11 +31,11 @@ const randomChoreDoorGenerator = ()=>{
 	for (let i = 0; i < doorImages.length; i++){
 	  let anImage = doorImages[i]
 	  let anImagePic = imageList[i]
-	  anImage.onclick = () => (
-	    if(!isClicked(anImage)){
+	  anImage.onclick = () => {
+	    if (!isClicked(anImage)){
           anImage.src = imageList[i]
           playDoor()
-        })
+        }}
     }
 }
 
