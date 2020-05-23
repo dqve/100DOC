@@ -8,7 +8,7 @@ const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chor
 
 const spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg"
 
-randomChoreDoorGenerator = ()=>{
+const randomChoreDoorGenerator = ()=>{
     const numClosedDoors = 3;
     const choreDoor = Math.floor(Math.random() * numClosedDoors);
 
@@ -38,5 +38,11 @@ randomChoreDoorGenerator = ()=>{
 	}
 }
 
+const playDoor = () => {
+  if (numClosedDoors === 0){
+    gameOver()
+  }
+  numClosedDoors--
+}
 
 randomChoreDoorGenerator()
