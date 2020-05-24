@@ -29,7 +29,6 @@ const randomChoreDoorGenerator = () => {
         openDoorA = beachDoorPath;
         openDoorB = spaceDoorPath;
     }
-    console.log(choreDoor)
     const imageList = [openDoorA, openDoorB, openDoorC]
 
     for (let i = 0; i < doorImages.length; i++) {
@@ -67,7 +66,6 @@ const gameOver = (status) => {
         if(!currentlyPlaying){startButton.onclick = () => {
             startRound()
         }}
-    console.log(currentlyPlaying)
     
 }
 
