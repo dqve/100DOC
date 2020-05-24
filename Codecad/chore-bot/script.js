@@ -1,7 +1,7 @@
 let doorImages = document.querySelectorAll('.door-frame')
 let numClosedDoors = doorImages.length;
 let openDoorA, openDoorB, openDoorC;
-
+let currentlyPlaying = true
 const botDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/robot.svg"
 
 const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/beach.svg"
@@ -36,7 +36,7 @@ const randomChoreDoorGenerator = ()=>{
 	  anImage.onclick = () => {
 	    if (!isClicked(anImage)){
           anImage.src = imageList[i]
-          playDoor()
+          playDoor(doorImages[i])
         }}
   }
 }
@@ -44,8 +44,18 @@ const randomChoreDoorGenerator = ()=>{
 function gameOver(status){
       if(status === 'win') {
         startButton.innerHTML = 'You win! Play again?';
+      }else{
+        startButton.innerHTML = 'Game over! Play again?';
       }
     }
+
+const isBot = (door) => {
+  if(door.src == botDoorPath){
+    return true
+  }else{
+    return false
+  }
+}
 
 const isClicked = (door) => {
   closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
@@ -56,10 +66,12 @@ const isClicked = (door) => {
   }
 }
 
-const playDoor = () => {
+const playDoor = (door) => {
   numClosedDoors--
   if (numClosedDoors === 0){
     gameOver('win')
+  }else if (isBot(door)){
+    gameOver()
   }
 
 }
