@@ -92,4 +92,4 @@ const playDoor = (door) => {
 
 }
 
-randomChoreDoorGenerator()
+startRound()
