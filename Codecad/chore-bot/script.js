@@ -39,7 +39,9 @@ const randomChoreDoorGenerator = ()=>{
           playDoor()
         }}
     gaveOver(status){
-      
+      if(status === 'win') {
+        startButton.innerHTML = 'You win! Play again?';
+      }
     }
   }
 }
@@ -56,7 +58,7 @@ const isClicked = (door) => {
 const playDoor = () => {
   numClosedDoors--
   if (numClosedDoors === 0){
-    gameOver()
+    gameOver('win')
   }
 
 }
