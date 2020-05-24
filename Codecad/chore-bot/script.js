@@ -38,13 +38,14 @@ const randomChoreDoorGenerator = ()=>{
           anImage.src = imageList[i]
           playDoor()
         }}
-    gaveOver(status){
+  }
+}
+
+function gameOver(status){
       if(status === 'win') {
         startButton.innerHTML = 'You win! Play again?';
       }
     }
-  }
-}
 
 const isClicked = (door) => {
   closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
