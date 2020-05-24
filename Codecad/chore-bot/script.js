@@ -8,6 +8,8 @@ const beachDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chor
 
 const spaceDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/space.svg"
 
+let closedDoorPath = "https://s3.amazonaws.com/codecademy-content/projects/chore-door/images/closed_door.svg"
+
 const startButton = document.getElementById('start');
 
 const randomChoreDoorGenerator = () => {
@@ -39,10 +41,6 @@ const randomChoreDoorGenerator = () => {
                 playDoor(doorImages[i])
             }
         }
-        startButton.onclick = () => {
-            startRound()
-        }
-
     }
 }
 
@@ -53,16 +51,24 @@ const startRound = () => {
     currentlyPlaying = true
     doorImages.forEach( animage => animage.src = closedDoorPath)
     randomChoreDoorGenerator()
+    startButton.onclick = () => ("")
 
 }
 
 const gameOver = (status) => {
+    currentlyPlaying = false
+    const playingStatus = () => (false)
     if (status == 'win') {
         startButton.innerHTML = 'You win! Play again?';
     } else {
         startButton.innerHTML = 'Game over! Play again?';
     }
-    currentlyPlaying = false
+
+        if(!currentlyPlaying){startButton.onclick = () => {
+            startRound()
+        }}
+    console.log(currentlyPlaying)
+    
 }
 
 const isBot = (door) => {
