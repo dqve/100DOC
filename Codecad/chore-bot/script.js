@@ -34,19 +34,23 @@ const randomChoreDoorGenerator = ()=>{
 	  let anImage = doorImages[i]
 	  let anImagePic = imageList[i]
 	  anImage.onclick = () => {
-	    if (!isClicked(anImage)){
+	    if (currentlyPlaying && !isClicked(anImage)){
           anImage.src = imageList[i]
           playDoor(doorImages[i])
         }}
+    startButton.onclick = () => {
+      startRound()
+    }
   }
 }
 
-function gameOver(status){
+const gameOver = (status) => {
       if(status === 'win') {
         startButton.innerHTML = 'You win! Play again?';
       }else{
         startButton.innerHTML = 'Game over! Play again?';
       }
+      currentlyPlaying = false
     }
 
 const isBot = (door) => {
